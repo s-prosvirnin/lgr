@@ -106,7 +106,7 @@ func (e errorDto) Error() string {
 }
 
 func (e errorDto) Unwrap() error {
-	return e.err
+	return errors.Unwrap(e.err)
 }
 
 func (e errorDto) IsExpected(inspectedErr error) bool {
