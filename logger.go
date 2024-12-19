@@ -30,8 +30,6 @@ const (
 	logLevelError   logLevel = "error"
 )
 
-const contextParamsKey = "log_params"
-
 func (l logLevel) toZapLevel() (zap.AtomicLevel, error) {
 	switch l {
 	case logLevelDebug:

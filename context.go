@@ -2,6 +2,8 @@ package main
 
 import "context"
 
+const contextParamsKey = "log_params"
+
 func CtxWithValue(ctx context.Context, params ...KVParam) context.Context {
 	oldParams := getContextParams(ctx)
 
