@@ -32,6 +32,9 @@ func (t ErrType) IsErrorOfType(err error) bool {
 
 	return false
 }
+func (t ErrType) Wrap(wrapped ErrType) ErrType {
+	return ErrType(t.String() + "." + wrapped.String())
+}
 
 type Error interface {
 	WithParams(params ...KVParam) Error
