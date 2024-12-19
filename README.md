@@ -1,4 +1,13 @@
-```
+``` go
+package main
+
+import (
+	"context"
+	"log/slog"
+	"os"
+	"time"
+)
+
 func main() {
 	myLogger()
 }
